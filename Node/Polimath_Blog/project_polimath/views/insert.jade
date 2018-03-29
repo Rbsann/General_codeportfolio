@@ -1,0 +1,14 @@
+
+block content
+	h1=title
+	form(method='post', action='/admin/add', enctype="multipart/form-data")
+		.form-group
+			label title:
+			input.form-control(name='title', type='text')
+		.form-group
+			label Body
+			textarea.form-control(name='body', id='body')
+		input.btn.btn-default(name='submit',type='submit',value='Save')
+		script(src='/ckeditor/ckeditor.js')
+		script
+			| CKEDITOR.replace('body');

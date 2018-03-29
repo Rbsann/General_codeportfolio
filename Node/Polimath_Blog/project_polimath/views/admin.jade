@@ -1,0 +1,106 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
+    meta(name="description", content="")
+    meta(name="author", content="")
+    title SB Admin - Start Bootstrap Template
+    // Bootstrap core CSS
+    link(href="/stylesheets/vendor/bootstrap/css/bootstrap.min.css", rel="stylesheet")
+    // Custom fonts for this template
+    link(href="/stylesheets/vendor/font-awesome/css/font-awesome.min.css", rel="stylesheet", type="text/css")
+    // Page level plugin CSS
+    link(href="/stylesheets/vendor/datatables/dataTables.bootstrap4.css", rel="stylesheet")
+    // Custom styles for this template
+    link(href="/stylesheets/sb-admin.css", rel="stylesheet")
+  body#page-top.fixed-nav.sticky-footer.bg-dark
+    // Navigation
+    nav#mainNav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+      a.navbar-brand(href="/admin") Admin Page
+      button.navbar-toggler.navbar-toggler-right(type="button", data-toggle="collapse", data-target="#navbarResponsive", aria-controls="navbarResponsive", aria-expanded="false", aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+      #navbarResponsive.collapse.navbar-collapse
+        ul#exampleAccordion.navbar-nav.navbar-sidenav
+          li.nav-item(data-toggle="tooltip", data-placement="right")
+            a.nav-link(href="/admin/posts")
+              span.nav-link-text Posts
+          li.nav-item(data-toggle="tooltip", data-placement="right")
+            a.nav-link(href="/admin/goals")
+              span.nav-link-text Goals
+          li.nav-item(data-toggle="tooltip", data-placement="right")
+            a.nav-link(href="/")
+              span.nav-link-text Home
+          ul.navbar-nav.sidenav-toggler
+            li.nav-item
+              a#sidenavToggler.nav-link.text-center
+                i.fa.fa-fw.fa-angle-left
+          ul.navbar-nav.ml-auto
+            .dropdown-menu(aria-labelledby="alertsDropdown")
+              h6.dropdown-header New Alerts:
+              .dropdown-divider
+              a.dropdown-item(href="#")
+                span.text-success
+                  strong
+                    i.fa.fa-long-arrow-up.fa-fw
+                    | Status Update
+                span.small.float-right.text-muted 11:21 AM
+                .dropdown-message.small This is an automated server response message. All systems are online.
+              .dropdown-divider
+              a.dropdown-item(href="#")
+                span.text-danger
+                  strong
+                    i.fa.fa-long-arrow-down.fa-fw
+                    | Status Update
+                span.small.float-right.text-muted 11:21 AM
+                .dropdown-message.small This is an automated server response message. All systems are online.
+              .dropdown-divider
+              a.dropdown-item(href="#")
+                span.text-success
+                  strong
+                    i.fa.fa-long-arrow-up.fa-fw
+                    | Status Update
+                span.small.float-right.text-muted 11:21 AM
+                .dropdown-message.small This is an automated server response message. All systems are online.
+              .dropdown-divider
+              a.dropdown-item.small(href="#") View all alerts
+            li.nav-item
+    .content-wrapper
+      .container-fluid
+        // Breadcrumbs
+        ol.breadcrumb
+          li.breadcrumb-item
+      // /.container-fluid
+      // /.content-wrapper
+      footer.sticky-footer
+        .container
+      // Scroll to Top Button
+      a.scroll-to-top.rounded(href="#page-top")
+        i.fa.fa-angle-up
+      // Logout Modal
+      #exampleModal.modal.fade(tabindex="-1", role="dialog", aria-labelledby="exampleModalLabel", aria-hidden="true")
+        .modal-dialog(role="document")
+          .modal-content
+            .modal-header
+              h5#exampleModalLabel.modal-title Ready to Leave?
+              button.close(type="button", data-dismiss="modal", aria-label="Close")
+                span(aria-hidden="true") ×
+            .modal-body Select "Logout" below if you are ready to end your current session.
+            .modal-footer
+              button.btn.btn-secondary(type="button", data-dismiss="modal") Cancel
+              a.btn.btn-primary(href="login.html") Logout
+      // Bootstrap core JavaScript
+      script(src="vendor/jquery/jquery.min.js")
+      script(src="vendor/bootstrap/js/bootstrap.bundle.min.js")
+      // Core plugin JavaScript
+      script(src="vendor/jquery-easing/jquery.easing.min.js")
+      // Page level plugin JavaScript
+      script(src="vendor/chart.js/Chart.min.js")
+      script(src="vendor/datatables/jquery.dataTables.js")
+      script(src="vendor/datatables/dataTables.bootstrap4.js")
+      // Custom scripts for all pages
+      script(src="js/sb-admin.min.js")
+      // Custom scripts for this page
+      script(src="js/sb-admin-datatables.min.js")
+      script(src="js/sb-admin-charts.min.js")

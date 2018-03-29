@@ -1,0 +1,10 @@
+ul.success li{
+	padding:15px;
+	margin-bottom: 10px;
+	border:1px solid;
+	border-radius: 4px;
+		color:red;
+	background-color: #dff1d7;
+	border-color: #d5e8c2;
+	list-style: none;
+}
