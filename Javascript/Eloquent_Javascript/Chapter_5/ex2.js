@@ -13,7 +13,7 @@ When defining the function, you can use a regular loop to do the actual looping.
 const loop =(value,test,update,body)=>{
   if(test(value))
   {
-    body(value)
+    body(value);
   value=update(value);
   loop(value,test,update,body)};
   
