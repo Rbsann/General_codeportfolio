@@ -1,0 +1,104 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+  	   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Twitch Channels App</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="thumbnail-gallery.css" rel="stylesheet">
+   
+ 
+  <link rel="stylesheet" href="main.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Kavivanar" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Skranji" rel="stylesheet"> 
+   <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet"> 
+  </head>
+  <body>
+  	 <div class="container">
+
+      <h1 class="my-4 text-center text-lg-left">Twitch Channels App</h1>
+
+      <div class="row text-center text-lg-left">
+
+        <div class="col-lg-4 col-md-4 col-xs-6">
+         <h5> Channel Freecodecamp</h5>
+         <a href='https://www.twitch.tv/freecodecamp'><h6>Status:</h6></a>
+         <span id='freecodecamp'>
+         </span>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-xs-6">
+         <h5> Channel Overwatchleague</h5>
+         <a href='https://www.twitch.tv/overwatchleague'><h6>Status:</h6></a>
+         <span id='overwatchleague'>
+         </span>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-xs-6">
+         <h5> Channel Wintergaming</h5>
+         <a href='https://www.twitch.tv/wintergaming'><h6>Status:</h6></a>
+         <span id='wintergaming'>
+         </span>
+        </div>
+
+         <div class="col-lg-4 col-md-4 col-xs-6">
+         <h5> Channel TeamSpooky</h5>
+         <a href='https://www.twitch.tv/teamspooky'><h6>Status:</h6></a>
+         <span id='teamspooky'>
+         </span>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-xs-6">
+         <h5> Channel ESL_SC2</h5>
+         <a href='https://www.twitch.tv/ESL_SC2'><h6>Status:</h6></a>
+         <span id='ESL_SC2'>
+         </span>
+        </div>
+
+
+    </div>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+    <!--  <script src="vendor/jquery/jquery.min.js"></script> -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+  	let channels =  ["freecodecamp","overwatchleague", "wintergaming", "teamspooky", "ESL_SC2" ];
+  	channels.forEach(function(channel){
+  			$.getJSON('https://wind-bow.gomix.me/twitch-api/streams/'+channel+'?callback=?', function(data) {
+  				if(!data.stream){
+  					let status = 'offline';
+  					console.log(status);
+  					document.getElementById(channel).innerHTML='<p>'+status+'</p>';
+  					document.getElementById(channel).style.color='DarkMagenta';
+
+  				}
+  				else{
+  					let status = 'online';
+  					document.getElementById(channel).innerHTML+='<p>'+status+'</p>';
+  					document.getElementById(channel).style.color='Chartreuse';
+  					let content = data.stream.channel.status;
+  					document.getElementById(channel).innerHTML+='<p> Content: '+content+'</p>';
+  					// document.getElementById(channel).innerHTML+=content;
+
+
+  					console.log(status);
+  				}
+  				// $('#'+channel).append(status);
+  console.log(data);
+  // console.log(channel);
+});
+  	})
+
+//   	$.getJSON('https://wind-bow.gomix.me/twitch-api/streams/jdotb?callback=?', function(data) {
+//   console.log(data);
+// });
+  </script>
+  </body>
+</html>

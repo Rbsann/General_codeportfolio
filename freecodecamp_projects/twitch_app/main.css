@@ -1,0 +1,23 @@
+body{
+	background-color: teal;
+}
+h1{
+	font-family: 'Kavivanar', cursive;
+	color:silver;
+	text-align:center;
+	margin:300px;
+
+}
+h5,h6{
+	font-family: 'Skranji', cursive;
+	color:black !important;
+}
+
+span{
+	font-family:'Indie Flower', cursive;
+	color:PeachPuff;		
+}
+a{
+	text-decoration: none;
+}
+
